@@ -13,8 +13,7 @@ import java.util.Set;
 public class Driver {
     public static void main(String[] args) {
 
-        long time = new Date().getTime();
-        System.out.println(time);
+        long starTtime = new Date().getTime();
 
         if (args.length < 1 || args.length > 2) {
             System.out.println("Incorrect program usage");
@@ -31,6 +30,10 @@ public class Driver {
 
             System.out.println(e.getMessage());
         }
+
+        long endTtime = new Date().getTime();
+        System.out.println(" ");
+        System.out.println("Total time taken : " + new Date(endTtime - starTtime).getTime() + " ms");
 
 
     }
